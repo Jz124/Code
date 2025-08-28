@@ -23,32 +23,38 @@
         font-family: "Microsoft YaHei", SimSun, Arial;
         background:#F7E08D;
         overflow: visible !important;
-        /* 去掉边框 */
         border: none !important;
     }
     .btn {
         position: absolute;
-        width:76px;
+        width:72px;
         height:26px;
-        top:11px; /* 原来13px, 上移2px */
-        background:#DE6E22;
-        border:1px solid #B3591B;
+        top:11px;
+        background:none;
+        border:none;
         text-align:center;
         line-height:26px;
         font-family: "Microsoft YaHei", SimSun, Arial;
         cursor: pointer;
+        padding: 0;
     }
     .btn a {
         display:block;
-        width:76px;
+        width:72px;
         height:26px;
-        color:#fff !important;
+        padding:0;
+        margin:0;
+        border:none;
+        background:none;
         text-decoration:none;
     }
-    .btn a:hover {
-        background:#B3591B;
+    .btn a img {
+        width:72px;
+        height:26px;
+        display:block;
+        border:none;
     }
-    #btn1 { left:5px; }   
+    #btn1 { left:5px; }
     #btn2 { left:87px; }
     #btn3 { left:169px; }
     #btn4 { left:251px; }
@@ -56,10 +62,10 @@
     #btn6 { left:415px; }
     #scroll-window {
         position:absolute;
-        width:279px;       /* 283 - 4 */
-        height:220px;      /* 224 - 4 */
-        left:7px;          /* 6px-2px */
-        top:49px;          /* 51px-2px */
+        width:279px;
+        height:220px;
+        left:7px;
+        top:49px;
         border:1px solid #8F7929;
         overflow:auto;
         background:#FEFBC5;
@@ -90,18 +96,18 @@
     }
     #carousel {
         position:absolute;
-        width:199px;       /* 203 - 4 */
-        height:223px;      /* 227 - 4 */
-        left:290px;        /* 291-4 */
-        top:49px;          /* 51-2 */
+        width:199px;
+        height:223px;
+        left:290px;
+        top:49px;
         border:1px solid #666;
         overflow:hidden;
         z-index:1;
     }
     .carousel-img {
         position:absolute;
-        width:199px;       /* 203-4 */
-        height:223px;      /* 227-4 */
+        width:199px;
+        height:223px;
         display:none;
         filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
     }
@@ -132,9 +138,9 @@
         _filter:alpha(opacity=100) !important;
         border-color:#B3591B !important;
     }
-    #ctrl1 { left:137px; } /* 141-4 */
-    #ctrl2 { left:157px; } /* 161-4 */
-    #ctrl3 { left:177px; } /* 181-4 */
+    #ctrl1 { left:137px; }
+    #ctrl2 { left:157px; }
+    #ctrl3 { left:177px; }
     .ctrl-btn:hover {
         filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
         _filter:alpha(opacity=100);
@@ -152,14 +158,14 @@
         line-height: 9px;
     }
     #left-info {
-        width:279px;        /* 283-4 */
-        left:7px;           /* 6-2 */
-        top:278px;          /* 282-4 */
+        width:279px;
+        left:7px;
+        top:278px;
     }
     #right-info {
-        width:199px;        /* 203-4 */
-        left:290px;         /* 291-4 */
-        top:278px;          /* 282-4 */
+        width:199px;
+        left:290px;
+        top:278px;
         font-family: "Microsoft YaHei", SimSun, Arial;
     }
     #left-info a, #right-info a,
@@ -187,7 +193,7 @@
         margin: 0 0 2px 0;
     }
     #right-info .link-container {
-        width:199px;       /* 203-4 */
+        width:199px;
         overflow:hidden;
         display: block;
         font-family: "Microsoft YaHei", SimSun, Arial;
@@ -227,13 +233,37 @@
 
 <body>
 <div id="container">
-    <!-- 导航按钮 -->
-    <div class="btn" id="btn1"><a href="https://www.17173.com/" target="_blank">官网</a></div>
-    <div class="btn" id="btn2"><a href="https://www.gamersky.com/" target="_blank">新手</a></div>
-    <div class="btn" id="btn3"><a href="https://www.duowan.com/" target="_blank">下载</a></div>
-    <div class="btn" id="btn4"><a href="https://news.qq.com/ch/games" target="_blank">论坛</a></div>
-    <div class="btn" id="btn5"><a href="https://games.sina.com.cn/" target="_blank">商城</a></div>
-    <div class="btn" id="btn6"><a href="https://game.163.com/" target="_blank">安全</a></div>
+    <!-- 导航按钮（图片） -->
+    <div class="btn" id="btn1">
+        <a href="https://www.17173.com/" target="_blank">
+            <img src="gw.png" alt="官网">
+        </a>
+    </div>
+    <div class="btn" id="btn2">
+        <a href="https://www.gamersky.com/" target="_blank">
+            <img src="xs.png" alt="新手">
+        </a>
+    </div>
+    <div class="btn" id="btn3">
+        <a href="https://www.duowan.com/" target="_blank">
+            <img src="xz.png" alt="下载">
+        </a>
+    </div>
+    <div class="btn" id="btn4">
+        <a href="https://news.qq.com/ch/games" target="_blank">
+            <img src="lt.png" alt="论坛">
+        </a>
+    </div>
+    <div class="btn" id="btn5">
+        <a href="https://games.sina.com.cn/" target="_blank">
+            <img src="sc.png" alt="商城">
+        </a>
+    </div>
+    <div class="btn" id="btn6">
+        <a href="https://game.163.com/" target="_blank">
+            <img src="aq.png" alt="安全">
+        </a>
+    </div>
 
     <!-- 滚动窗口 -->
     <div id="scroll-window">
@@ -389,35 +419,34 @@ document.onkeydown = function(e) {
 
     // 常见开发者、保存、打印、查找、关闭、刷新等快捷键
     if (
-        // 开发者工具
-        (isCtrl && isShift && (keyCode === 73 || keyCode === 67 || keyCode === 74 || keyCode === 75)) || // Ctrl+Shift+I/C/J/K
-        (isCtrl && isShift && keyCode === 68) || // Ctrl+Shift+D
-        (isCtrl && keyCode === 85) ||       // Ctrl+U
-        (isCtrl && keyCode === 83) ||       // Ctrl+S
-        (isCtrl && keyCode === 80) ||       // Ctrl+P
-        (isCtrl && keyCode === 79) ||       // Ctrl+O
-        (isCtrl && keyCode === 70) ||       // Ctrl+F
-        (isCtrl && isShift && keyCode === 70) || // Ctrl+Shift+F
-        (isCtrl && keyCode === 78) ||       // Ctrl+N
-        (isCtrl && keyCode === 82) ||       // Ctrl+R
-        (isCtrl && isShift && keyCode === 82) || // Ctrl+Shift+R
-        (isCtrl && keyCode === 87) ||       // Ctrl+W
-        (isCtrl && keyCode === 9) ||        // Ctrl+Tab
-        (isCtrl && isShift && keyCode === 84) || // Ctrl+Shift+T
-        (isCtrl && isShift && keyCode === 78) || // Ctrl+Shift+N
-        (isCtrl && isShift && keyCode === 68) || // Ctrl+Shift+D
-        (isCtrl && keyCode === 69) ||       // Ctrl+E
-        (isCtrl && keyCode === 72) ||       // Ctrl+H
-        (isCtrl && isShift && keyCode === 72) || // Ctrl+Shift+H
-        (isCtrl && keyCode === 65) ||       // Ctrl+A
-        (isCtrl && keyCode === 67) ||       // Ctrl+C
-        (isCtrl && keyCode === 88) ||       // Ctrl+X
-        (isCtrl && keyCode === 86) ||       // Ctrl+V
-        (isCtrl && keyCode === 45) ||       // Ctrl+Insert
-        (isShift && keyCode === 45) ||      // Shift+Insert
-        (isCtrl && isShift && keyCode === 46) || // Ctrl+Shift+Del
-        (isCtrl && keyCode === 116) ||      // Ctrl+F5
-        (isCtrl && keyCode === 123)         // Ctrl+F12
+        (isCtrl && isShift && (keyCode === 73 || keyCode === 67 || keyCode === 74 || keyCode === 75)) ||
+        (isCtrl && isShift && keyCode === 68) ||
+        (isCtrl && keyCode === 85) ||
+        (isCtrl && keyCode === 83) ||
+        (isCtrl && keyCode === 80) ||
+        (isCtrl && keyCode === 79) ||
+        (isCtrl && keyCode === 70) ||
+        (isCtrl && isShift && keyCode === 70) ||
+        (isCtrl && keyCode === 78) ||
+        (isCtrl && keyCode === 82) ||
+        (isCtrl && isShift && keyCode === 82) ||
+        (isCtrl && keyCode === 87) ||
+        (isCtrl && keyCode === 9) ||
+        (isCtrl && isShift && keyCode === 84) ||
+        (isCtrl && isShift && keyCode === 78) ||
+        (isCtrl && isShift && keyCode === 68) ||
+        (isCtrl && keyCode === 69) ||
+        (isCtrl && keyCode === 72) ||
+        (isCtrl && isShift && keyCode === 72) ||
+        (isCtrl && keyCode === 65) ||
+        (isCtrl && keyCode === 67) ||
+        (isCtrl && keyCode === 88) ||
+        (isCtrl && keyCode === 86) ||
+        (isCtrl && keyCode === 45) ||
+        (isShift && keyCode === 45) ||
+        (isCtrl && isShift && keyCode === 46) ||
+        (isCtrl && keyCode === 116) ||
+        (isCtrl && keyCode === 123)
     ) {
         return false;
     }
