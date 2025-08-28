@@ -11,11 +11,6 @@
         margin: 0;
         padding: 0;
     }
-    body,div,img {
-        margin:0;
-        padding:0;
-        border:0;
-    }
     #container {
         position: relative;
         width:498px;
@@ -25,21 +20,10 @@
         overflow: visible !important;
         border: none !important;
     }
-    .nav-row {
+    /* 导航按钮精确定位 */
+    .btn {
         position: absolute;
         top: 11px;
-        left: 0;
-        width: 100%;
-        height: 26px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        /* 调整左右边距：可以用padding或者gap配合flex */
-        padding: 0 7px; /* 左右各留16px间距，可调整为你想要的值 */
-        box-sizing: border-box;
-        z-index: 2;
-    }
-    .btn {
         width:72px;
         height:26px;
         background:none;
@@ -50,7 +34,6 @@
         cursor: pointer;
         padding: 0;
         margin: 0;
-        flex: 0 0 72px;
     }
     .btn a {
         display:block;
@@ -68,6 +51,15 @@
         display:block;
         border:none;
     }
+    /* 按钮精确分布，左右边距11px，每个按钮间距13px */
+    #btn1 { left:11px; }
+    #btn2 { left:96px; }   /* 11+72+13=96 */
+    #btn3 { left:181px; }  /* 96+72+13=181 */
+    #btn4 { left:266px; }
+    #btn5 { left:351px; }
+    #btn6 { left:436px; }
+
+    /* 其余样式略，保持原样 */
     #scroll-window {
         position:absolute;
         width:279px;
@@ -78,14 +70,6 @@
         overflow:auto;
         background:#FEFBC5;
         font-size:14px;
-        scrollbar-base-color: #FFF3C1;
-        scrollbar-face-color: #FFF3C1;
-        scrollbar-arrow-color: #B3591B;
-        scrollbar-track-color: #F7E08D;
-        scrollbar-shadow-color: #B3591B;
-        scrollbar-highlight-color: #FFF3C1;
-        scrollbar-3dlight-color: #F7E08D;
-        scrollbar-darkshadow-color: #502D0C;
     }
     .link-pair { margin:4px 0; overflow:hidden; zoom:1; }
     .link-item {
@@ -223,48 +207,40 @@
         margin:0;
     }
     </style>
-    <!--[if lte IE 8]>
-    <style type="text/css">
-        .nav-row { display: block !important; padding: 0 16px !important; }
-        .btn { float: left; }
-    </style>
-    <![endif]-->
 </head>
 
 <body>
 <div id="container">
-    <!-- 导航按钮平铺并留有左右间距 -->
-    <div class="nav-row">
-        <div class="btn" id="btn1">
-            <a href="https://www.17173.com/" target="_blank">
-                <img src="gw.png" alt="官网">
-            </a>
-        </div>
-        <div class="btn" id="btn2">
-            <a href="https://www.gamersky.com/" target="_blank">
-                <img src="xs.png" alt="新手">
-            </a>
-        </div>
-        <div class="btn" id="btn3">
-            <a href="https://www.duowan.com/" target="_blank">
-                <img src="xz.png" alt="下载">
-            </a>
-        </div>
-        <div class="btn" id="btn4">
-            <a href="https://news.qq.com/ch/games" target="_blank">
-                <img src="lt.png" alt="论坛">
-            </a>
-        </div>
-        <div class="btn" id="btn5">
-            <a href="https://games.sina.com.cn/" target="_blank">
-                <img src="sc.png" alt="商城">
-            </a>
-        </div>
-        <div class="btn" id="btn6">
-            <a href="https://game.163.com/" target="_blank">
-                <img src="aq.png" alt="安全">
-            </a>
-        </div>
+    <!-- 导航按钮（图片） -->
+    <div class="btn" id="btn1">
+        <a href="https://www.17173.com/" target="_blank">
+            <img src="gw.png" alt="官网">
+        </a>
+    </div>
+    <div class="btn" id="btn2">
+        <a href="https://www.gamersky.com/" target="_blank">
+            <img src="xs.png" alt="新手">
+        </a>
+    </div>
+    <div class="btn" id="btn3">
+        <a href="https://www.duowan.com/" target="_blank">
+            <img src="xz.png" alt="下载">
+        </a>
+    </div>
+    <div class="btn" id="btn4">
+        <a href="https://news.qq.com/ch/games" target="_blank">
+            <img src="lt.png" alt="论坛">
+        </a>
+    </div>
+    <div class="btn" id="btn5">
+        <a href="https://games.sina.com.cn/" target="_blank">
+            <img src="sc.png" alt="商城">
+        </a>
+    </div>
+    <div class="btn" id="btn6">
+        <a href="https://game.163.com/" target="_blank">
+            <img src="aq.png" alt="安全">
+        </a>
     </div>
 
     <!-- 滚动窗口 -->
